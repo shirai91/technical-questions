@@ -19,16 +19,19 @@ o	What techniques/processes do you use?
 13.	Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
 14.	How do you organize your code? (module pattern, classical inheritance?)
 15.	What are the advantages and disadvantages of using Ajax?
-16.	Create a for loop that iterates up to 100 while outputting "hello" at multiples of 3, "bitrep" at multiples of 5 and "hello bitrep" at multiples of 3 and 5
-17.	What are the differences between ES6 class and ES5 function constructors?
-18.	What is your process to find a performance bug in your code and what tools do you use?
-19.	What are some ways to improve your websites scrolling performance?
-20.	Is it better to serve your site assets from multiple domains?  Why or why not?
-21.	Explain in as much detail as possible what happens when you enter a URL into a web browser.
+16.	[Create a for loop that iterates up to 100 while outputting "hello" at multiples of 3, "bitrep" at multiples of 5 and "hello bitrep" at multiples of 3 and 5](#question-16)
+17.	[What are the differences between ES6 class and ES5 function constructors?](#question-17)
+18.	[What is your process to find a performance bug in your code and what tools do you use?](#question-18)
+19.	[What are some ways to improve your websites scrolling performance?](#question-19)
+20.	[Is it better to serve your site assets from multiple domains?  Why or why not?](#question-20)
+21.	[Explain in as much detail as possible what happens when you enter a URL into a web browser.](#question-21)
 22.	[Is What is the difference btwn onClick={() => this.props.onClick()}
 and onClick={this.props.onClick()} ?  Which component type would use which?](#question-22)
 
 ## Answers
+
+### Question 21
+
 
 ### Question 22
 In react, if you use
@@ -36,7 +39,7 @@ In react, if you use
 onClick={() => this.props.onClick()}
 ```
 everytime host component trigger `render()`, onClick prop will change value to new created function (created by `()=>this.props.onClick()`), and component attached with above `onClick` prop will trigger a re-render (as react component only re-render when props or state change, or you trigger component.forceupdate() function), which will cause performance issue especially on a page with large amount of components
-But when you are using
+But when you use
 ```javascript
 onClick={this.props.onClick()}
 ```
