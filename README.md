@@ -1,5 +1,5 @@
-# technical-questions-bitrep
-My personal answers for BITREP's technical question
+# technical-questions
+My personal answers for some technical questions
 
 ## Questions
 1.	[What did you learn this past week?](#question-1)
