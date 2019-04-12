@@ -2,7 +2,7 @@
 My personal answers for BITREP's technical question
 
 ## Questions
-1.	[What did you learn this past week?(#question-1)
+1.	[What did you learn this past week?](#question-1)
 2.	When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?
 3.	Can you describe some SEO best practices or techniques you have used lately?
 4.	Can you explain any common techniques or recent issues solved in regards to front-end security?
