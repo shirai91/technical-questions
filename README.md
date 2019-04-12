@@ -35,7 +35,7 @@ In react, if you use
 ```javascript
 onClick={() => this.props.onClick()}
 ```
-everytime host component trigger `render()`, onClick prop will change value to new created function (created by `()=>this.props.onClick()`), and component has above `onClick` prop trigger a re-render, as react component only re-render when props or state change, or you trigger component.forceupdate() function, which will cause performance issue especially on a page with large amount of components
+everytime host component trigger `render()`, onClick prop will change value to new created function (created by `()=>this.props.onClick()`), and component attached with above `onClick` prop will trigger a re-render (as react component only re-render when props or state change, or you trigger component.forceupdate() function), which will cause performance issue especially on a page with large amount of components
 But when you are using
 ```javascript
 onClick={this.props.onClick()}
