@@ -25,9 +25,19 @@ o	What techniques/processes do you use?
 19.	What are some ways to improve your websites scrolling performance?
 20.	Is it better to serve your site assets from multiple domains?  Why or why not?
 21.	Explain in as much detail as possible what happens when you enter a URL into a web browser.
-22.	What is the difference btwn onClick={() => this.props.onClick()}
-and onClick={this.props.onClick()} ?  Which component type would use which?
+22.	[Is What is the difference btwn onClick={() => this.props.onClick()}
+and onClick={this.props.onClick()} ?  Which component type would use which?](#question-22)
 
 ## Answers
 
-### Question 1
+### Question 22
+In react, if you use
+```javascript
+onClick={() => this.props.onClick()}
+```
+everytime host component trigger `render()`, onClick prop will change value to new created function (created by `()=>this.props.onClick()`), and component has above `onClick` prop trigger a re-render, as react component only re-render when props or state change, or you trigger component.forceupdate() function, which will cause performance issue especially on a page with large amount of components
+But when you are using
+```javascript
+onClick={this.props.onClick()}
+```
+everytime host component trigger `render()`, onClick prop will still have same value with previous props, and component attached with above `onClick` will not trigger re-render
