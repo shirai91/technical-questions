@@ -30,6 +30,12 @@ and onClick={this.props.onClick()} ?  Which component type would use which?](#qu
 
 ## Answers
 
+### Question 18
+When a performance bugs happening (which can show as memory leak. fps drop dramatically, some 'delay' and browser 'freeze'), we can use chrome/firefox devtool to find out the problems. chrome devtool has 'performance' tab, which allow you to record and diagnostic everything happen with your pages. I'm often use this workflow:
+1. Try to reproduce the issue
+2. Open devtool-> performance tool, click record and reproduce the issue.
+3. Stop recording, and inspect the report output. The output will showing as a timeline, find the 'event' which cause the issue, and inspect on timeline, if the script's time is high, it caused by  that javascript function, check the implementation of that event and find out the root cause
+
 ### Question 21
 1. When you type url into address bar of your browser
 2. The browser checks the cache for a DNS record to find the corresponding IP address of url follow this order: browser cache, OS cache , router cache, IPS cache.
