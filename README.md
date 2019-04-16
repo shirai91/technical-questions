@@ -36,6 +36,14 @@ When a performance bugs happening (which can show as memory leak. fps drop drama
 2. Open devtool-> performance tool, click record and reproduce the issue.
 3. Stop recording, and inspect the report output. The output will showing as a timeline, find the 'event' which cause the issue, and inspect on timeline, if the script's time is high, it caused by  that javascript function, check the implementation of that event and find out the root cause
 
+### Question 19
+I'm not often dealing with scroll performance, but i'm got some basic case which i'm solved by using these solutions:
+1. Debounce the scroll event if you need to watch scroll event
+2. Use devtool to diagnostic `layout` and `paint`'s time. if it too high and browser cannot render ~60fps. we need to review all css in current rendering page. and optimize it follow this approach : avoid to resize elements. try to avoid expensive styles (like box-shadow)
+
+### Question 20
+Yes, because browsers usually have limits on the number of concurrent downloads from a domain at a moment. So, serving assets from multiple domains can increase the concurrent level, so it can improve loading speed of static resource.
+
 ### Question 21
 When you type url into address bar of your browser
 1. The browser checks the cache for a DNS record to find the corresponding IP address of url follow this order: browser cache, OS cache , router cache, IPS cache.
