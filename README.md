@@ -31,6 +31,14 @@ and onClick={this.props.onClick()} ?  Which component type would use which?](#qu
 ## Answers
 
 ### Question 21
+1. When you type url into address bar of your browser
+2. The browser checks the cache for a DNS record to find the corresponding IP address of url follow this order: browser cache, OS cache , router cache, IPS cache.
+3. If request url is not in the cache, ISP's DNS server initiates a DNS query to find the IP address of the server that host url
+4. Browser initiates a TCP connection with the server
+5. The browser sends an HTTP request to the webbrowser
+6. The server handle request and send back a response.
+7. The server sends out an HTTP response.
+8. The browser displays the HTML content for HTML response.
 
 
 ### Question 22
