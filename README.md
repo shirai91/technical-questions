@@ -16,7 +16,7 @@ My personal answers for some technical questions
 10. [Explain some of the pros and cons for CSS animations versus JavaScript animations.](#question-10)
 11. [How would you approach fixing browser-specific styling issues?](#question-11)
 12. [How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?](#question-12)
-13. [Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?](question-13)
+13. [Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?](#question-13)
 14. [How do you organize your code? (module pattern, classical inheritance?)](#question-14)
 15. [What are the advantages and disadvantages of using Ajax?](#question-15)
 16. [Create a for loop that iterates up to 100 while outputting "hello" at multiples of 3, "bitrep" at multiples of 5 and "hello bitrep" at multiples of 3 and 5](#question-16)
