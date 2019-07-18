@@ -25,16 +25,18 @@ My personal answers for some technical questions
 19. [What are some ways to improve your websites scrolling performance?](#question-19)
 20. [Is it better to serve your site assets from multiple domains? Why or why not?](#question-20)
 21. [Explain in as much detail as possible what happens when you enter a URL into a web browser.](#question-21)
-22. [Is What is the difference btwn onClick={() => this.props.onClick()} and onClick={this.props.onClick()} ? Which component type would use which?](#question-22)
+22. [What is the difference btwn onClick={() => this.props.onClick()} and onClick={this.props.onClick()} ? Which component type would use which?](#question-22)
 
 ## Answers
 
 ### Question 1
+What did you learn this past week?
 
 - How facebook testing react app
 - How to parse javascript file into ASTtree
 
 ### Question 2
+When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?
 
 - Reduce extra HTTP Requests
 - Minify CSS, JS and HTML
@@ -43,6 +45,7 @@ My personal answers for some technical questions
 - Use Files and images
 
 ### Question 3
+Can you describe some SEO best practices or techniques you have used lately?
 
 - Title tags:
 
@@ -71,10 +74,12 @@ My personal answers for some technical questions
   - Do not use non-alpha characters in your image or file names (so no %, &, \$, etc…)
 
 ### Question 4
+Can you explain any common techniques or recent issues solved in regards to front-end security?
 
 We resolved the cookie injection by move jwt token and sensitive datas from localStorage to cookie with 'httponly'
 
 ### Question 5
+What actions have you personally taken on recent projects to increase maintainability of your code?
 
 - Sometime i refactor old component which outdated with current structure to improve maintainability
 - Write instruction about how to start a new feature, and how to use our cli tool
@@ -82,6 +87,7 @@ We resolved the cookie injection by move jwt token and sensitive datas from loca
 - Write custom eslint rules to help code review for common case
 
 ### Question 6
+Can you describe your workflow when you get a design to create a web page?
 
 1. Figuring out main topic/purpose of the page.
 2. Is there a creative commons template exists for this topic?
@@ -92,22 +98,26 @@ We resolved the cookie injection by move jwt token and sensitive datas from loca
 5. Publish and ask some of your friends to test and review page. If there is bugs or nice suggestions, go, step 4.
 
 ### Question 7
+If you have 5 different stylesheets, how would you best integrate them into the site?
 
 if we're not using any post-css tools, i will consider to refactoring CSS in the prespective stylesheet, to prevent duplicated CSS, if we are using a post-css tool(s), i would import them as partials into main stylesheet (also consider to refactoring to prevent duplicated, but we should write a tool/script to do that )
 
 ### Question 8
+How many resources will a browser download from a given domain at a time? What are the exceptions?
 
 It depend on browser, for chrome, it is 6, firefox 6, and ie 11 is 8. here is a very useful reference website [http://www.browserscope.org/?category=network&v=1](http://www.browserscope.org/?category=network&v=1)
 
 As it limited per domain, so, in theory, if you has multiple domains pointing to the same IP address, we can increase the number of download connection at the same time to our site
 
 ### Question 9
+Name 3 ways to decrease page load (perceived or actual load time)
 
 - Minify the javascript, and split it to smaller chunks
 - Combine and prune CSS files
 - Compress image, or use some lazyloading technical.
 
 ### Question 10
+Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
 CSS Animation
 
@@ -136,6 +146,7 @@ Javascript Animation
   - Javascript need time to execute, and parse, and cause browser re-paint, in some case it will have poor performance
 
 ### Question 11
+How would you approach fixing browser-specific styling issues?
 
 Because fixing crossbroser-style issue is take so much time, and we always needed to rework from begin, while i'm developing a web application, i always follow the guidelines:
 
@@ -145,17 +156,20 @@ Because fixing crossbroser-style issue is take so much time, and we always neede
 - Use the knowledge and experience I’ve gained from my years in web development to know in advance what to avoid or what to do to make something work in all the browsers
 
 ### Question 12
+How do you serve your pages for feature-constrained browsers? What techniques/processes do you use?
 
 - We often building an application for modern browsers while ensuring it remains functional in older browsers. (or adding some polyfill)
 - We can check for feature support on caniuse.com, if that feature is fully support, i will use it, if some browser not support it, i will find some polyfill, if there is no way to use polyfill for that feature, i will find out an alternative way
 - We use Autoprefixer for automatic vendor prefix insertion.
 
 ### Question 13
+Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
 
 - Responsive design starts on the desktop; that is, at the maximum required resolution, and then scales down to the smallest screen. Even though the content and layout contract to fit smartphones, the navigation, content and download speeds are geared more for your traditional website.
 - Mobile-first design is similar to designing a mobile app and then adapting the layout that it can be viewed neatly on tablet and desktop devices without too many modifications. Your whole design and layout are based on providing excellent mobile user-experience: fast download speeds, rich media content to keep your target audience interested, easy touchscreen navigation and so on.
 
 ### Question 14
+How do you organize your code? (module pattern, classical inheritance?)
 
 When building a javascript applications, i'm always try to organize my application follow some below approachs:
 
@@ -186,6 +200,7 @@ The pros of this structure is can support a long-time run project, we can change
 The cons is this structure contains so many file, and complexity, for resolve this issue, i provide some script to generate template file using `plop`, and write some `eslint rule` to make sure team member not put jsx into duck files
 
 ### Question 15
+What are the advantages and disadvantages of using Ajax?
 
 - Pros
   - Improve user experience by fetching small data without re-load page
@@ -196,7 +211,8 @@ The cons is this structure contains so many file, and complexity, for resolve th
   - Use ajax may cause so many security issues (xss, reverse engineering)
   - In some case, if developer adding some polling system call, it will increase load on server
 
-### Quesstion 16
+### Question 16
+Create a for loop that iterates up to 100 while outputting "hello" at multiples of 3, "bitrep" at multiples of 5 and "hello bitrep" at multiples of 3 and 5
 
 ```javascript
 const helloBitrep = () => {
@@ -207,20 +223,22 @@ const helloBitrep = () => {
       output += "hello";
     }
     if (!(i % 5)) {
-      output += "bitrep";
+      output += " bitrep";
     }
     if (output) {
-      console.log(output);
+      console.log(output.trim());
     }
   }
 };
 ```
 
 ### Question 17
+What are the differences between ES6 class and ES5 function constructors?
 
 Technically, class is just a suger syntax for es5 function constructors, you can micmic all es6 class's features with es5 constructor functions
 
 ### Question 18
+What is your process to find a performance bug in your code and what tools do you use?
 
 When a performance bugs happening (which can show as memory leak. fps drop dramatically, some 'delay' and browser 'freeze'), we can use chrome/firefox devtool to find out the problems. chrome devtool has 'performance' tab, which allow you to record and diagnostic everything happen with your pages. I'm often use this workflow:
 
@@ -231,6 +249,7 @@ When a performance bugs happening (which can show as memory leak. fps drop drama
    NOTE: browsers always ship new version every few months, which improve performance of js,css. so nothing stay the same, so dont follow any outdated `cheat sheet` for finding performance bugs, we should use developer tools for identify where is the root cause of the problem.
 
 ### Question 19
+What are some ways to improve your websites scrolling performance?
 
 I'm not often dealing with scroll performance, but i'm got some basic case which i'm solved by using these solutions:
 
@@ -238,10 +257,12 @@ I'm not often dealing with scroll performance, but i'm got some basic case which
 2. Use devtool to diagnostic `layout` and `paint`'s time. if it too high and browser cannot render ~60fps. we need to review all css in current rendering page. and optimize it follow this approach : avoid to resize elements. try to avoid expensive styles (like box-shadow)
 
 ### Question 20
+Is it better to serve your site assets from multiple domains? Why or why not?
 
 Yes, because browsers usually have limits on the number of concurrent downloads from a domain at a moment. So, serving assets from multiple domains can increase the concurrent level, so it can improve loading speed of static resource.
 
 ### Question 21
+Explain in as much detail as possible what happens when you enter a URL into a web browser.
 
 When you type url into address bar of your browser
 
@@ -254,6 +275,7 @@ When you type url into address bar of your browser
 7. The browser try to parse the response (HTML to DOM and CSS to CSSOM, parse javascript to EStree to execution). if the response is NOT html, browser display it as plain text, or try to parse it based on specific browser.
 
 ### Question 22
+What is the difference btwn onClick={() => this.props.onClick()} and onClick={this.props.onClick()} ? Which component type would use which?
 
 In react, if you use
 
